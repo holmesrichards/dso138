@@ -1,0 +1,42 @@
+G04 #@! TF.GenerationSoftware,KiCad,Pcbnew,6.0.9-8da3e8f707~116~ubuntu22.04.1*
+G04 #@! TF.CreationDate,2022-11-12T12:35:46-05:00*
+G04 #@! TF.ProjectId,dso138_testpanel,64736f31-3338-45f7-9465-737470616e65,rev?*
+G04 #@! TF.SameCoordinates,Original*
+G04 #@! TF.FileFunction,Soldermask,Top*
+G04 #@! TF.FilePolarity,Negative*
+%FSLAX46Y46*%
+G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
+G04 Created by KiCad (PCBNEW 6.0.9-8da3e8f707~116~ubuntu22.04.1) date 2022-11-12 12:35:46*
+%MOMM*%
+%LPD*%
+G01*
+G04 APERTURE LIST*
+%ADD10C,5.000000*%
+%ADD11C,4.000000*%
+G04 APERTURE END LIST*
+D10*
+G04 #@! TO.C,H15*
+X75000000Y112000000D03*
+G04 #@! TD*
+D11*
+G04 #@! TO.C,H6*
+X94000000Y117000000D03*
+G04 #@! TD*
+G04 #@! TO.C,H9*
+X6000000Y38000000D03*
+G04 #@! TD*
+G04 #@! TO.C,H3*
+X6000000Y117000000D03*
+G04 #@! TD*
+D10*
+G04 #@! TO.C,H14*
+X77980000Y125200000D03*
+G04 #@! TD*
+G04 #@! TO.C,H13*
+X22100000Y125200000D03*
+G04 #@! TD*
+D11*
+G04 #@! TO.C,H12*
+X94000000Y38000000D03*
+G04 #@! TD*
+M02*
