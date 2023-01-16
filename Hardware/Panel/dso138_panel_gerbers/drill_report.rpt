@@ -1,0 +1,25 @@
+Drill report for dso138_panel.kicad_pcb
+Created on Tue Nov 29 22:26:16 2022
+
+Copper Layer Stackup:
+    =============================================================
+    L1 :  F.Cu                      front
+    L2 :  B.Cu                      back
+
+
+Drill file 'dso138_panel.drl' contains
+    plated through holes:
+    =============================================================
+    T1  0.600mm  0.0236"  (40 holes)
+    T2  2.500mm  0.0984"  (4 holes)
+    T3  3.200mm  0.1260"  (8 holes)  (with 4 slots)
+
+    Total plated holes count 52
+
+
+Not plated through holes are merged with plated holes
+    unplated through holes:
+    =============================================================
+    T4  5.000mm  0.1969"  (1 hole)
+
+    Total unplated holes count 1

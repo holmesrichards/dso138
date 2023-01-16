@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name "dso138_panel")(type "KiCad")(uri "${KIPRJMOD}/dso138_panel.pretty")(options "")(descr ""))
+)

@@ -1,2 +1,2 @@
-gerbergen.sh 'dso138_testpanel' 'dso138_testpanel'
+gerbergen.sh 'dso138_panel' 'dso138_panel'
 
