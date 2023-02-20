@@ -1,62 +1,73 @@
+This is a work in progress; better README to come soon. Meanwhile:
+
+**Untested hardware and software — Do not assume anything works!**
+
 # DSO138 Oscilloscope
 
-This is the JYE Tech DSO128 Oscilloscope put behind a 10 cm wide Kosmo format panel. 
+This is the JYE Tech DSO138 Oscilloscope put behind a 10 cm wide Kosmo format panel. 
 
-Slide switches and tactile buttons are mounted to an auxiliary PCB. BNC input connects to this board and from there to scope board. 1/4" input jack connects to this board, with signal going through an op amp buffer and from there out to scope input and to 1/4" through jack.
+Slide switches, tactile buttons, and trigger indicator LED are mounted to an auxiliary PCB mounted behind the panel. Also on this board are a Eurorack style 10-pin power header with 10 µF caps and power reversal diodes, and a 9 volt regulator and TL072 op amp with associated passive components.
 
-LED is mounted to aux board and feeds through panel hole. Or maybe shine through panel?
+A BNC jack and a 1/4" phone input jack are mounted on the front panel. A toggle switch selects whether the scope input is connected to the BNC or to the 1/4" jack signal after being buffered with the TL072. The latter signal, buffered, also goes to a second 1/4" panel mounted jack, so the signal can be passed on to another module.
 
-Maybe use ribbon cables and IDC headers to link scope board to aux board. (8 wires needed for each DP3T switch; 8 wires needed for 5 tact buttons + input + LED (a, k). So 4 8-pin IDC headers.) Also JST headers to connect jacks and toggle.
+Also on the front panel is another toggle switch, controlling the 9 V power. (It's good to power off the scope when not in use, in part because the scope draws about 130 mA current on the +12 V rail, and in part because doing so will help extend the life of the display.)
 
-Eurorack header on aux board provides power for op amp and (via wire to power connector) scope.
+Connections to and from each slide switch are sent to the DSO138 switch footprints via an 8-conductor ribbon cable. A fourth ribbon cable connects the tactile buttons, both sides of the LED, and the input signal to the appropriate pads on the main board. Two more wires carry 9 V and ground to that board, which is mounted perpendicular to the front panel. 
 
-BNC connects directly (on panel) to one throw of a SPDT toggle switch, center switch terminal via aux board to DSO input. Audio jack is buffered and op amp output connects to other throw of toggle switch. Audio jack also buffered and connects via 1k to through jack.
+The display PCB is mounted to the front panel and is connected to the main PCB via a 40 conductor ribbon cable.
 
-## Aux board to panel:
+## Current draw
+130 mA +12 V, 10 mA -12 V
 
-### JST:
 
-* Input switch
-* Audio jack for buffer to through
-* Through jack
+## Photos
 
-## Aux board to scope PCB:
+![]()
 
-### 8 pos IDC:
+![]()
 
-* DP3T switches (x3)
-* 5 tactiles + ground + input + LED
+## Documentation
 
-### JST:
+* [Schematic](Docs/dso138.pdf)
+* PCB layout: [front](Docs/dso138_layout_front.pdf), [back](Docs/dso138_layout_back.pdf)
+* [BOM](Docs/dso138_bom.md)
+* [Build notes](Docs/build.md)
+* [How it works](Docs/howitworks.md)
+* [Blog post]()
 
-* Power
+## GitHub repository
 
-Parts:
+* [https://github.com/holmesrichards/dso138](https://github.com/holmesrichards/dso138)
 
-|Qty|Desc|Part #|Vendor|SKU|
-|----|----|----|----|----|
-|3| DP3T slide switch |OS203012MU5QP1|Digi-key||
-|5| Tact button |TL1100F160Q|Digi-key||
-|4| Tact button cap, black |4JBLK|Digi-key|EG1080-ND|
-|1| Tact button cap, red |4JRED|Digi-key|EG1078-ND|
-|1| SPDT toggle switch ||Tayda||
-|1| BNC jack |1-1337541-0|Digi-key|A97557-ND|
-|2| 1/4" audio jack||Tayda||
-|1| 5mm LED, green ||Tayda||
-|4| Shrouded 2x4 pin header ||Tayda||
-|4| 2x4 IDC connector ||Tayda||
-|2'| 8 conductor ribbon cable ||Tayda||
-|1 | 6" 40 conductor male/female IDC ribbon cable assembly |H3AKH-4006G|Digi-key|H3AKH-4006G-ND|
-|1| Shrouded 2x5 pin header ||Tayda||
-|3| Molex 2 pin header ||Tayda||
-|3| Molex 2 pin connector ||Tayda||
-|6| Molex crimp ||Tayda||
-|1| JST 2 pin connector |XHP-2|Digi-key|455-2266-ND|
-|2| JST crimp |SXH-001T-P0.6N|Digi-key|455-4220-1-ND|
-|1| TL072 op amp ||Tayda||
-|1| 1M resistor ||Tayda||
-|1| 1k resistor ||Tayda||
-|2| 10 uF electrolytic cap ||Tayda||
-|2| 100 nF ceramic cap ||Tayda||
-|2| 1N5817 Schottky diode ||Tayda||
+## Submodules
 
+This repo uses submodules aoKicad and Kosmo_panel, which provide needed libaries for KiCad. To clone:
+
+```
+git clone git@github.com:holmesrichards/dso138.git
+git submodule init
+git submodule update
+```
+
+
+Alternatively do
+
+```
+git clone --recurse-submodules git@github.com:holmesrichards/dso138.git
+```
+
+Or if you download the repository as a zip file, you must also click on the "aoKicad" and "Kosmo\_panel" links on the GitHub page (they'll be in the Libraries folder and will have "@ something" after them) and download them as separate zip files which you can unzip into this repo's aoKicad and Kosmo\_panel directories (in the Libraries folder).
+
+If desired, copy the files from aoKicad and Kosmo\_panel to wherever you prefer. 
+
+Then in KiCad, go into Edit Symbols and add symbol libraries 
+
+```
+aoKicad/AO_symbols
+Kosmo_panel/Kosmo
+```
+and go into Edit Footprints and add footprint libraries 
+```
+aoKicad/AO_tht
+Kosmo_panel/Kosmo_panel.
+```
