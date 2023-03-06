@@ -1,4 +1,4 @@
-#DSO-138 module build notes
+# DSO-138 module build notes
 
 The PCB, panel, and mounting fixture in this repo are intended to be used with a DSO-138 scope kit. The kit should be assembled according to its instructions except to omit the following:
 
