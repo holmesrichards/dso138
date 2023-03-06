@@ -1,6 +1,6 @@
 # dso138.kicad_sch BOM
 
-Sun 05 Mar 2023 08:32:04 PM EST
+Sun 05 Mar 2023 09:16:09 PM EST
 
 Generated from schematic by Eeschema 7.0.0-da2b9df05c~171~ubuntu22.04.1
 
@@ -9,9 +9,8 @@ Generated from schematic by Eeschema 7.0.0-da2b9df05c~171~ubuntu22.04.1
 | Refs | Qty | Component | Description | Manufacturer | Part | Vendor | SKU |
 | ----- | --- | ---- | ----------- | ---- | ---- | ---- | ---- |
 | C1, C2 | 2 | 10uF | Electrolytic capacitor, 2.5 mm pitch |  |  | Tayda | A-4349 |
-| C3, C4 | 2 | 100nF | Ceramic capacitor, 2.5 mm pitch |  |  | Tayda | A-553 |
+| C3, C4, C6 | 3 | 100nF | Ceramic capacitor, 2.5 mm pitch |  |  | Tayda | A-553 |
 | C5 | 1 | 330nF | Electrolytic capacitor, 2.5 mm pitch |  |  | Tayda | A-319 |
-| C6 | 1 | 100nF | Ceramic capacitor, 2.5 mm pitch |  |  | Tayda | A-962 |
 | D1, D2 | 2 | 1N5817 | Schottky Barrier Rectifier Diode, DO-41 |  |  | Tayda | A-159 |
 | D3 | 1 | LED_green | Light emitting diode |  |  | Tayda | A-1553 |
 | J1 | 1 | DIP-8 | 8 pin DIP socket |  |  | Tayda | A-001 |

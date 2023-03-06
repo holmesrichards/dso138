@@ -2168,7 +2168,7 @@
     (property "Vendor" "Tayda" (at 162.56 154.94 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "SKU" "A-962" (at 162.56 154.94 0)
+    (property "SKU" "A-553" (at 162.56 154.94 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Description" "Ceramic capacitor, 2.5 mm pitch" (at 162.56 154.94 0)
