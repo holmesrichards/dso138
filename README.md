@@ -1,7 +1,3 @@
-This is a work in progress; better README to come soon. Meanwhile:
-
-**Untested hardware and software — Do not assume anything works!**
-
 # DSO138 Oscilloscope
 
 This is the JYE Tech DSO138 Oscilloscope put behind a 10 cm wide Kosmo format panel. 
@@ -10,9 +6,9 @@ Slide switches, tactile buttons, and trigger indicator LED are mounted to an aux
 
 A BNC jack and a 1/4" phone input jack are mounted on the front panel. A toggle switch selects whether the scope input is connected to the BNC or to the 1/4" jack signal after being buffered with the TL072. The latter signal, buffered, also goes to a second 1/4" panel mounted jack, so the signal can be passed on to another module.
 
-Also on the front panel is another toggle switch, controlling the 9 V power. (It's good to power off the scope when not in use, in part because the scope draws about 130 mA current on the +12 V rail, and in part because doing so will help extend the life of the display.)
+Also on the front panel is another toggle switch, controlling the 9 V power. (It's good to power off the scope when not in use, for at least three reasons: the scope draws about 130 mA current on the +12 V rail, it probably puts out some digital noise you don't want getting into your synth sound, and leaving it powered off when not in use will help extend the life of the display.)
 
-Connections to and from each slide switch are sent to the DSO138 switch footprints via an 8-conductor ribbon cable. A fourth ribbon cable connects the tactile buttons, both sides of the LED, and the input signal to the appropriate pads on the main board. Two more wires carry 9 V and ground to that board, which is mounted perpendicular to the front panel. 
+Connections to and from each slide switch are sent to the DSO138 switch footprints via an 8-conductor ribbon cable. A fourth ribbon cable connects the tactile buttons, both sides of the LED, and the input signal to the appropriate pads on the main board. Two more wires carry 9 V and ground to that board, which is mounted perpendicular to the front panel. I used a 3D printed carrier and long spacers to attach it.
 
 The display PCB is mounted to the front panel and is connected to the main PCB via a 40 conductor ribbon cable.
 
@@ -22,18 +18,14 @@ The display PCB is mounted to the front panel and is connected to the main PCB v
 
 ## Photos
 
-![]()
-
-![]()
+![front](Images/front.jpg)
 
 ## Documentation
 
-* [Schematic](Docs/dso138.pdf)
+* [Schematic (auxiliary board)](Docs/dso138.pdf)
 * PCB layout: [front](Docs/dso138_layout_front.pdf), [back](Docs/dso138_layout_back.pdf)
 * [BOM](Docs/dso138_bom.md)
 * [Build notes](Docs/build.md)
-* [How it works](Docs/howitworks.md)
-* [Blog post]()
 
 ## GitHub repository
 
